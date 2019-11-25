@@ -3,7 +3,8 @@ const express = require('express')
 const app = express()
 
 const fs  = require('fs')
- 
+
+app.use(express.static('./static'))
 app.use(express.json())
 
 app.get('/', function(req, res){
