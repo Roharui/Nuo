@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 app.get('/', function(req, res){
     var html = fs.readFileSync('./index.html', 'utf8')
     db.conn.query(db.getAllSh(), (err, row) => {
-        if(err) return;
+        if(err) console.log(err);
         var result = ""
         //console.log(row)
         row.forEach(x => {
